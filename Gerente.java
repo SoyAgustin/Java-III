@@ -11,7 +11,9 @@ public class Gerente extends Funcionario { //Gerente ES UN funcionario
 	public boolean iniciarSesion(String clave) {
 		return clave == "AluraCursosOnline";
 	}
+	//Sobreescritura del método, porque volvimos a escribir el método.
 	public double getBonificacion() {
-		return super.getSalario();
+		return super.getSalario()+ super.getBonificacion();
+		//     obtiene el salario + obtiene la bonificacion del funcionario
 	}
 }
