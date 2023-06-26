@@ -1,5 +1,7 @@
 
-public class Funcionario {
+//Ahora se toma la clase como abstracta, para instanciar esta clase hay que hacerlo mediante una clase heredada. 
+
+public abstract class Funcionario {
 	private String nombre;
 	private String documento;
 	private double salario;
@@ -28,7 +30,7 @@ public class Funcionario {
 	}
 	
 	public double getBonificacion() {
-		return this.salario*0.1;	
+		return this.salario*0.05;	
 	}
 
 	public int getTipo() {
