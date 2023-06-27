@@ -14,7 +14,7 @@ public class Gerente extends Funcionario { //Gerente ES UN funcionario
 	//Sobreescritura del método, porque volvimos a escribir el método.
 	public double getBonificacion() {
 		System.out.println("Ejecutando bonificacion desde GERENTE");
-		return super.getSalario()+ super.getBonificacion();
+		return super.getSalario()+ this.getSalario()*0.05;
 		//     obtiene el salario + obtiene la bonificacion del funcionario
 	}
 }
