@@ -1,5 +1,6 @@
 
-public class Gerente extends Funcionario { //Gerente ES UN funcionario
+public class Gerente extends Funcionario implements Autenticable { //Gerente ES UN funcionario
+	
 	private String clave;
 	
 	public void setClave(String clave){
@@ -12,6 +13,7 @@ public class Gerente extends Funcionario { //Gerente ES UN funcionario
 		return clave == "AluraCursosOnline";
 	}
 	//Sobreescritura del método, porque volvimos a escribir el método.
+	@Override
 	public double getBonificacion() {
 		System.out.println("Ejecutando bonificacion desde GERENTE");
 		return super.getSalario()+ this.getSalario()*0.05;

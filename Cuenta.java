@@ -1,6 +1,6 @@
 
 public abstract class Cuenta {
-	protected double saldo; // es accesible para las clases hijas 
+	protected double saldo; // es accesible para las clases hijas (como CuentaAhorros al usar this.sal)
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente(); 
