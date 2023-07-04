@@ -5,7 +5,7 @@ public class AutenticacionUtil {
 	public boolean iniciarSesion(String clave) {
 		return this.clave == clave;
 	}
-	public void setClave(String clave) {
-		this.clave = clave;
+	public boolean setClave(String clave) {
+		return this.clave == clave;
 	}
 }

@@ -4,7 +4,11 @@ public class Administrador extends Funcionario implements Autenticable {
 	//Queremos que el administrador tambien se pued autenticar
 	//La clase con ese método es Gerente
 	
-	private String clave;
+	private AutenticacionUtil util;
+	
+	public Administrador() {
+		this.util = new AutenticacionUtil();
+	}
 	@Override
 	public double getBonificacion() {
 		return this.getSalario();
@@ -12,15 +16,12 @@ public class Administrador extends Funcionario implements Autenticable {
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		if (this.clave == clave) {
-			return true;
-		}
-		return false;
+		return this.util.setClave(clave);
 	}
 
 	@Override
 	public void setClave(String clave) {
-		this.clave = clave;
+		this.util.iniciarSesion(clave);
 		
 	}
 
